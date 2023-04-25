@@ -7,16 +7,26 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.getdatafromapi.Adapter.Album_Adapter
+import com.example.getdatafromapi.Adapter.Post_Adapter
 import com.example.getdatafromapi.Factory.AlbumFactory
+import com.example.getdatafromapi.Factory.Post_Factory
 import com.example.getdatafromapi.Repository.Album_Repository
+import com.example.getdatafromapi.Repository.Post_Repository
 import com.example.getdatafromapi.ViewModel.AlbumViewModel
+import com.example.getdatafromapi.ViewModel.PostViewModel
 import com.example.getdatafromapi.databinding.ActivityAlbumRecyclerViewBinding
+import okhttp3.internal.notify
 
 class Album_RecyclerView : AppCompatActivity() {
+
     lateinit var binding: ActivityAlbumRecyclerViewBinding
+
     lateinit var factory: AlbumFactory
     lateinit var viewModel: AlbumViewModel
     lateinit var adapter: Album_Adapter
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
        binding = DataBindingUtil.setContentView(this , R.layout.activity_album_recycler_view)
@@ -37,6 +47,10 @@ class Album_RecyclerView : AppCompatActivity() {
             binding.apiDataField.adapter = adapter
             adapter.notifyDataSetChanged()
         })
+
+
+
+
 
     }
 }

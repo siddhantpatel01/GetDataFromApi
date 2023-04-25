@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
 
         binding.albums.setOnClickListener(this)
+        binding.posts.setOnClickListener(this)
+        binding.Comments.setOnClickListener(this)
 
     }
 
@@ -27,6 +29,13 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.albums ->{
                 startActivity(Intent(this,Album_RecyclerView::class.java))
             }
+            R.id.posts ->{
+                startActivity(Intent(this,PostActivity::class.java))
+            }
+            R.id.Comments ->{
+                startActivity(Intent(this,Comment_Activity::class.java))
+            }
+
         }
     }
 }
