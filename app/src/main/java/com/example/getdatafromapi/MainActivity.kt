@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding.Comments.setOnClickListener(this)
 
     }
-
     override fun onClick(view: View?) {
         when(view?.id){
             R.id.albums ->{

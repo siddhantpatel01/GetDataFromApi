@@ -31,7 +31,7 @@ class Album_RecyclerView : AppCompatActivity() {
         super.onCreate(savedInstanceState)
        binding = DataBindingUtil.setContentView(this , R.layout.activity_album_recycler_view)
 
-        factory = AlbumFactory(Album_Repository())
+        //factory = AlbumFactory(Album_Repository())
 
 //        viewModel = ViewModelProvider(this,
 //            ViewModelProvider.AndroidViewModelFactory.getInstance(application))[AlbumViewModel::class.java]
